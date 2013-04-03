@@ -7,7 +7,7 @@
     <?php echo 'Number of visitors:'?>
     <?php $arg1 = passthru("./num_visitors.py"); echo $arg1;?>
     <?php $arg2 = exec("./visitors+1.py");?>
-    <?php $useragent = $_SERVER['HTTP_USER_AGENT'];
+    <?php $useragent = htmlspecialchars($_SERVER["HTTP_USER_AGENT"], ENT_QUOTES, "utf-8");
     //Running out of time, going to use dumb way to increment browser count 
           if(preg_match('|MSIE([0-9].[0-9]{1,2})|',$useragent,$matched))
           {

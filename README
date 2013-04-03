@@ -1,0 +1,22 @@
+index.php:
+The Website page written in php with html and calls to python scripts.  The file displays the number of users that have visited the website over its lifetime, display's the user's current browser, and informs the user the most commonly used browser by visitors to the site.  The php code determines what browser the user is using and then calls a python script that will keep track of the number of browsers used by visitors and then another python script is called to find the most commonly used browser.
+
+
+num_visitors.py:
+A python script that displays the number of visitors that have visited to the website.  The number of visitors is stored in visitors.txt.
+
+visitors+1.py:
+A python script that increments the number of visitors that have visited by one when a user looks at the site.
+
+visitors.txt
+The text file that holds the number of visitors that have visited the site.
+
+
+IE.py, Opera.py, Firefox.py, Safari.py, other.py:
+These python scripts increment the number stored in IE.txt, Opera.txt, Firefox.txt, Safari.txt, and other.txt respectively (just like visitor+1.py).  This is how I keep track of the number of browsers used by different visitors.  I implemented it this way dumbly because I have a midterm and I need to study.
+
+IE.txt, Opera.txt, Firefox.txt, Safari.txt, and other.txt:
+These text files hold a number that represents the number of times a certain browser has been used by users to visit the site.
+
+browser_popular.py:
+This python script takes IE.txt, Opera.txt, Firefox.txt, Safari.txt, and other.txt and finds which contains the largest integer.  It then prints out the browser name with the browser that has the highest count.
